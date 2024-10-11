@@ -5,7 +5,7 @@ export default function Dashboard() {
 
 	useEffect(() => {
 		const loadLibrary = async () => {
-			const { join } = await import("lodash/join");
+			const { default: join } = await import("lodash/join");
 			const result = join(["Hello", "World"], " ");
 			setData(result);
 		};
